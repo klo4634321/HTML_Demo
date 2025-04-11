@@ -1,0 +1,201 @@
+body {
+    font-family: Arial, "Microsoft JhengHei", sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+.nav {
+    background-color: #2c3e50;
+    padding: 15px 0;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.nav-button {
+    display: inline-block;
+    padding: 8px 20px;
+    margin: 0 10px;
+    background-color: #3498db;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.nav-button:hover {
+    background-color: #2980b9;
+    cursor: pointer;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+header {
+    text-align: center;
+    padding: 20px 0;
+    border-bottom: 2px solid #eee;
+    margin-bottom: 20px;
+}
+
+h1 {
+    margin: 0;
+    color: #2c3e50;
+}
+
+.contact-info {
+    margin: 10px 0;
+    font-size: 16px;
+}
+
+.section {
+    margin-bottom: 30px;
+}
+
+.section-title {
+    color: #2c3e50;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+}
+
+.entry {
+    margin-bottom: 20px;
+}
+
+.entry-title {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.entry-info {
+    display: flex;
+    justify-content: space-between;
+    color: #555;
+    font-style: italic;
+    margin-bottom: 5px;
+}
+
+.entry-description {
+    text-align: justify;
+}
+
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.skill {
+    background-color: #eef2f7;
+    padding: 5px 10px;
+    border-radius: 3px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px 0;
+    color: #777;
+    font-size: 14px;
+}
+
+.profile-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 0 auto 15px;
+    display: block;
+    border: 3px solid #eee;
+}
+
+/* 自傳的收放按鈕與內容樣式 */
+.biography-container {
+    margin-bottom: 20px;
+}
+
+.biography-summary {
+    margin-bottom: 10px;
+}
+
+.biography-full {
+    display: none;
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 5px;
+    border-left: 4px solid #3498db;
+    margin-top: 10px;
+}
+
+.toggle-button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+}
+
+.toggle-button:hover {
+    background-color: #2980b9;
+}
+
+/* 響應式設計 */
+@media screen and (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+    
+    .nav-button {
+        padding: 6px 12px;
+        margin: 0 5px;
+        font-size: 14px;
+    }
+    
+    .entry-info {
+        flex-direction: column;
+    }
+    
+    .profile-image {
+        width: 120px;
+        height: 120px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .nav {
+        padding: 10px 0;
+    }
+    
+    .nav-button {
+        padding: 5px 10px;
+        margin: 0 3px;
+        font-size: 12px;
+    }
+    
+    h1 {
+        font-size: 24px;
+    }
+    
+    .contact-info {
+        font-size: 14px;
+    }
+    
+    .profile-image {
+        width: 100px;
+        height: 100px;
+    }
+}

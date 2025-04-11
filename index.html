@@ -13,6 +13,29 @@
             background-color: #f5f5f5;
             color: #333;
         }
+        .nav {
+            background-color: #2c3e50;
+            padding: 15px 0;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        .nav-button {
+            display: inline-block;
+            padding: 8px 20px;
+            margin: 0 10px;
+            background-color: #3498db;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+        .nav-button:hover {
+            background-color: #2980b9;
+            cursor: pointer;
+        }
         .container {
             max-width: 900px;
             margin: 0 auto;
@@ -85,9 +108,44 @@
             display: block;
             border: 3px solid #eee;
         }
+        /* 自傳的收放按鈕與內容樣式 */
+        .biography-container {
+            margin-bottom: 20px;
+        }
+        .biography-summary {
+            margin-bottom: 10px;
+        }
+        .biography-full {
+            display: none;
+            background-color: #f9f9f9;
+            padding: 15px;
+            border-radius: 5px;
+            border-left: 4px solid #3498db;
+            margin-top: 10px;
+        }
+        .toggle-button {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+            margin-top: 10px;
+            transition: background-color 0.3s;
+        }
+        .toggle-button:hover {
+            background-color: #2980b9;
+        }
     </style>
 </head>
 <body>
+    <div class="nav">
+        <a href="#about" class="nav-button">關於我</a>
+        <a href="#biography" class="nav-button">自傳</a>
+        <a href="#projects" class="nav-button">專案作品</a>
+    </div>
+
     <div class="container">
         <header>
             <img src="/api/placeholder/150/150" alt="個人照片" class="profile-image">
@@ -98,9 +156,34 @@
             </div>
         </header>
 
-        <section class="section">
+        <section id="about" class="section">
             <h2 class="section-title">個人簡介</h2>
             <p>在此處放置您的個人簡介，描述您的專業背景、核心優勢和職業目標。簡短有力地介紹自己，讓招聘者在短時間內了解您的價值和特點。</p>
+        </section>
+        
+        <section id="biography" class="section">
+            <h2 class="section-title">個人自傳</h2>
+            <div class="biography-container">
+                <div class="biography-summary">
+                    <p>我是一位專注於[您的專業領域]的專業人士，擁有[X]年的相關經驗。我畢業於[您的學校]，主修[您的專業]。我對[特定領域或技術]有濃厚的興趣，並致力於[您的職業目標]。</p>
+                </div>
+                <button class="toggle-button" onclick="toggleBiography()">展開完整自傳</button>
+                <div id="fullBiography" class="biography-full">
+                    <p>我出生於[出生地]，從小就對[興趣/專業]充滿熱情。在學生時代，我積極參與[相關活動]，這為我日後的職業發展奠定了堅實的基礎。</p>
+                    
+                    <p>大學期間，我專注於[專業]的學習，並參與了多個[相關項目]。特別是[具體項目名稱]讓我獲得了寶貴的實踐經驗。在[年份]年，我有幸加入[組織/機構名稱]實習，這段經歷大大提升了我的專業技能和團隊合作能力。</p>
+                    
+                    <p>畢業後，我加入了[公司名稱]，擔任[職位]。在這個角色中，我負責[主要職責]，並成功[成就或貢獻]。通過這些經歷，我不僅提升了專業技能，還培養了[軟技能，如領導力、問題解決能力等]。</p>
+                    
+                    <p>後來，我轉向[新領域或新公司]，希望能夠[職業目標]。在這段職業旅程中，我面臨了[挑戰]，但通過[解決方法]成功克服了困難。這些經歷讓我認識到[重要領悟]的重要性。</p>
+                    
+                    <p>在職業發展的同時，我也注重個人成長和持續學習。我定期參加[培訓/研討會]，並獲得了[證書/認證]。我相信只有不斷學習和提升，才能在快速變化的[行業名稱]中保持競爭力。</p>
+                    
+                    <p>展望未來，我希望能夠[職業目標和抱負]，並通過[方式/途徑]為[行業/社會]做出更大的貢獻。我期待能夠加入一個能夠讓我充分發揮專業技能和創造力的團隊，共同實現[共同目標]。</p>
+                    
+                    <p>在工作之餘，我熱衷於[興趣愛好]，這不僅豐富了我的生活，還為我的專業工作帶來了新的靈感和視角。我相信保持工作與生活的平衡對於長期職業發展至關重要。</p>
+                </div>
+            </div>
         </section>
 
         <section class="section">
@@ -162,7 +245,7 @@
             </div>
         </section>
 
-        <section class="section">
+        <section id="projects" class="section">
             <h2 class="section-title">專案經驗</h2>
             <div class="entry">
                 <div class="entry-title">專案名稱</div>
@@ -176,30 +259,24 @@
             </div>
         </section>
 
-        <section class="section">
-            <h2 class="section-title">證照與獎項</h2>
-            <div class="entry">
-                <div class="entry-title">證書/獎項名稱</div>
-                <div class="entry-info">
-                    <span>頒發機構</span>
-                    <span>獲得年份</span>
-                </div>
-            </div>
-        </section>
-
-        <section class="section">
-            <h2 class="section-title">語言能力</h2>
-            <div class="entry-description">
-                <p>中文：母語</p>
-                <p>英文：精通 (TOEIC 900分)</p>
-                <p>日文：中級 (JLPT N2)</p>
-                <!-- 根據您的實際情況修改 -->
-            </div>
-        </section>
-
         <footer>
             更新日期: 2025年4月
         </footer>
     </div>
+
+    <script>
+        function toggleBiography() {
+            const biographyElement = document.getElementById('fullBiography');
+            const buttonElement = document.querySelector('.toggle-button');
+            
+            if (biographyElement.style.display === 'block') {
+                biographyElement.style.display = 'none';
+                buttonElement.textContent = '展開完整自傳';
+            } else {
+                biographyElement.style.display = 'block';
+                buttonElement.textContent = '收起自傳';
+            }
+        }
+    </script>
 </body>
 </html>

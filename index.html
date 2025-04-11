@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>個人履歷</title>
+    <style>
+        body {
+            font-family: Arial, "Microsoft JhengHei", sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        header {
+            text-align: center;
+            padding: 20px 0;
+            border-bottom: 2px solid #eee;
+            margin-bottom: 20px;
+        }
+        h1 {
+            margin: 0;
+            color: #2c3e50;
+        }
+        .contact-info {
+            margin: 10px 0;
+            font-size: 16px;
+        }
+        .section {
+            margin-bottom: 30px;
+        }
+        .section-title {
+            color: #2c3e50;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 5px;
+            margin-bottom: 15px;
+        }
+        .entry {
+            margin-bottom: 20px;
+        }
+        .entry-title {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        .entry-info {
+            display: flex;
+            justify-content: space-between;
+            color: #555;
+            font-style: italic;
+            margin-bottom: 5px;
+        }
+        .entry-description {
+            text-align: justify;
+        }
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .skill {
+            background-color: #eef2f7;
+            padding: 5px 10px;
+            border-radius: 3px;
+        }
+        footer {
+            text-align: center;
+            padding: 20px 0;
+            color: #777;
+            font-size: 14px;
+        }
+        .profile-image {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin: 0 auto 15px;
+            display: block;
+            border: 3px solid #eee;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="/api/placeholder/150/150" alt="個人照片" class="profile-image">
+            <h1>您的姓名</h1>
+            <div class="contact-info">
+                <p>📧 your.email@example.com | 📱 0912-345-678 | 📍 台北市, 台灣</p>
+                <p>🔗 LinkedIn: linkedin.com/in/yourname | 🌐 個人網站: yourwebsite.com</p>
+            </div>
+        </header>
+
+        <section class="section">
+            <h2 class="section-title">個人簡介</h2>
+            <p>在此處放置您的個人簡介，描述您的專業背景、核心優勢和職業目標。簡短有力地介紹自己，讓招聘者在短時間內了解您的價值和特點。</p>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title">工作經歷</h2>
+            <div class="entry">
+                <div class="entry-title">職位名稱</div>
+                <div class="entry-info">
+                    <span>公司名稱</span>
+                    <span>起始年月 - 結束年月</span>
+                </div>
+                <ul class="entry-description">
+                    <li>描述您在這個職位上的主要職責和成就</li>
+                    <li>使用具體數據和例子來展示您的貢獻</li>
+                    <li>強調對公司或團隊產生的積極影響</li>
+                </ul>
+            </div>
+            
+            <div class="entry">
+                <div class="entry-title">職位名稱</div>
+                <div class="entry-info">
+                    <span>公司名稱</span>
+                    <span>起始年月 - 結束年月</span>
+                </div>
+                <ul class="entry-description">
+                    <li>描述您在這個職位上的主要職責和成就</li>
+                    <li>使用具體數據和例子來展示您的貢獻</li>
+                    <li>強調對公司或團隊產生的積極影響</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title">教育背景</h2>
+            <div class="entry">
+                <div class="entry-title">學位名稱</div>
+                <div class="entry-info">
+                    <span>學校名稱</span>
+                    <span>畢業年份</span>
+                </div>
+                <div class="entry-description">
+                    <p>主修科目: 您的主修</p>
+                    <p>GPA: 您的GPA (選填)</p>
+                    <p>相關課程: 列出與您申請職位相關的重要課程</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title">專業技能</h2>
+            <div class="skills">
+                <div class="skill">技能1</div>
+                <div class="skill">技能2</div>
+                <div class="skill">技能3</div>
+                <div class="skill">技能4</div>
+                <div class="skill">技能5</div>
+                <div class="skill">技能6</div>
+                <div class="skill">技能7</div>
+                <div class="skill">技能8</div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title">專案經驗</h2>
+            <div class="entry">
+                <div class="entry-title">專案名稱</div>
+                <div class="entry-info">
+                    <span>使用技術</span>
+                    <span>完成時間</span>
+                </div>
+                <div class="entry-description">
+                    <p>描述專案的目標、您的角色和貢獻，以及最終成果。強調您解決的問題和使用的技術。</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title">證照與獎項</h2>
+            <div class="entry">
+                <div class="entry-title">證書/獎項名稱</div>
+                <div class="entry-info">
+                    <span>頒發機構</span>
+                    <span>獲得年份</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title">語言能力</h2>
+            <div class="entry-description">
+                <p>中文：母語</p>
+                <p>英文：精通 (TOEIC 900分)</p>
+                <p>日文：中級 (JLPT N2)</p>
+                <!-- 根據您的實際情況修改 -->
+            </div>
+        </section>
+
+        <footer>
+            更新日期: 2025年4月
+        </footer>
+    </div>
+</body>
+</html>

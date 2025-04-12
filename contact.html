@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>聯絡我</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="nav">
+        <a href="index.html" class="nav-button"><i class="fas fa-home"></i> 回首頁</a>
+    </div>
+
+    <div class="container">
+        <section class="section">
+          <h2 class="section-title"><i class="fas fa-envelope"></i> 聯絡我</h2>
+      
+          <form action="https://formsubmit.co/klo4634321@gmail.com" method="POST">
+            <div class="entry">
+              <label for="name"><strong>姓名：</strong></label><br>
+              <input type="text" id="name" name="name" required style="width:100%; padding:10px; margin-bottom:15px; border-radius:8px; border:1px solid #ccc;">
+              
+              <label for="email"><strong>電子信箱：</strong></label><br>
+              <input type="email" id="email" name="email" required style="width:100%; padding:10px; margin-bottom:15px; border-radius:8px; border:1px solid #ccc;">
+              
+              <label for="message"><strong>留言內容：</strong></label><br>
+              <textarea id="message" name="message" rows="6" required style="width:100%; padding:10px; margin-bottom:15px; border-radius:8px; border:1px solid #ccc;"></textarea>
+      
+              <button type="submit" class="toggle-button">送出</button>
+            </div>
+          </form>
+        </section>
+    </div>
+      
+
+    <script>
+        document.getElementById("contactForm").addEventListener("submit", async function(e) {
+            e.preventDefault();
+
+            const name = document.getElementById("name").value;
+            const email = document.getElementById("email").value;
+            const message = document.getElementById("message").value;
+
+            const res = await fetch("https://formsubmit.co/ajax/klo4634321@gmail.com", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ name, email, message })
+            });
+
+            const data = await res.json();
+            const responseDiv = document.getElementById("responseMessage");
+
+            if (data.success === "true") {
+                responseDiv.innerHTML = "<p style='color:green;'>送出成功，感謝聯絡！</p>";
+                document.getElementById("contactForm").reset();
+            } else {
+                responseDiv.innerHTML = "<p style='color:red;'>送出失敗，請稍後再試。</p>";
+            }
+        });
+    </script>
+</body>
+</html>

@@ -4,184 +4,76 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>個人履歷</title>
-    <style>
-        body {
-            font-family: Arial, "Microsoft JhengHei", sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-            background-color: #f5f5f5;
-            color: #333;
-        }
-        .nav {
-            background-color: #2c3e50;
-            padding: 15px 0;
-            text-align: center;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-        .nav-button {
-            display: inline-block;
-            padding: 8px 20px;
-            margin: 0 10px;
-            background-color: #3498db;
-            color: white;
-            text-decoration: none;
-            border-radius: 4px;
-            font-weight: bold;
-            transition: background-color 0.3s;
-        }
-        .nav-button:hover {
-            background-color: #2980b9;
-            cursor: pointer;
-        }
-        .container {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: white;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        }
-        header {
-            text-align: center;
-            padding: 20px 0;
-            border-bottom: 2px solid #eee;
-            margin-bottom: 20px;
-        }
-        h1 {
-            margin: 0;
-            color: #2c3e50;
-        }
-        .contact-info {
-            margin: 10px 0;
-            font-size: 16px;
-        }
-        .section {
-            margin-bottom: 30px;
-        }
-        .section-title {
-            color: #2c3e50;
-            border-bottom: 1px solid #eee;
-            padding-bottom: 5px;
-            margin-bottom: 15px;
-        }
-        .entry {
-            margin-bottom: 20px;
-        }
-        .entry-title {
-            font-weight: bold;
-            margin-bottom: 5px;
-        }
-        .entry-info {
-            display: flex;
-            justify-content: space-between;
-            color: #555;
-            font-style: italic;
-            margin-bottom: 5px;
-        }
-        .entry-description {
-            text-align: justify;
-        }
-        .skills {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-        }
-        .skill {
-            background-color: #eef2f7;
-            padding: 5px 10px;
-            border-radius: 3px;
-        }
-        footer {
-            text-align: center;
-            padding: 20px 0;
-            color: #777;
-            font-size: 14px;
-        }
-        .profile-image {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            object-fit: cover;
-            margin: 0 auto 15px;
-            display: block;
-            border: 3px solid #eee;
-        }
-        /* 自傳的收放按鈕與內容樣式 */
-        .biography-container {
-            margin-bottom: 20px;
-        }
-        .biography-summary {
-            margin-bottom: 10px;
-        }
-        .biography-full {
-            display: none;
-            background-color: #f9f9f9;
-            padding: 15px;
-            border-radius: 5px;
-            border-left: 4px solid #3498db;
-            margin-top: 10px;
-        }
-        .toggle-button {
-            background-color: #3498db;
-            color: white;
-            border: none;
-            padding: 8px 15px;
-            border-radius: 4px;
-            cursor: pointer;
-            font-size: 14px;
-            margin-top: 10px;
-            transition: background-color 0.3s;
-        }
-        .toggle-button:hover {
-            background-color: #2980b9;
-        }
-    </style>
+    <!-- 引入 Google 字體 -->
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- 引入 Font Awesome 圖標 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="nav">
-        <a href="#about" class="nav-button">關於我</a>
-        <a href="#biography" class="nav-button">自傳</a>
-        <a href="#projects" class="nav-button">專案作品</a>
+        <a href="#about" class="nav-button"><i class="fas fa-user"></i> 關於我</a>
+        <a href="#biography" class="nav-button"><i class="fas fa-book-open"></i> 自傳</a>
+        <a href="#projects" class="nav-button"><i class="fas fa-project-diagram"></i> 專案作品</a>
     </div>
 
     <div class="container">
         <header>
             <img src="/api/placeholder/150/150" alt="個人照片" class="profile-image">
-            <h1>您的姓名</h1>
+            <h1>呂瑞邦</h1>
             <div class="contact-info">
-                <p>📧 your.email@example.com | 📱 0912-345-678 | 📍 台北市, 台灣</p>
-                <p>🔗 LinkedIn: linkedin.com/in/yourname | 🌐 個人網站: yourwebsite.com</p>
+                <p><i class="fas fa-envelope"></i> klo4634321@gmail.com | <i class="fas fa-phone"></i> 0912-299-501 | <i class="fas fa-map-marker-alt"></i> 桃園市, 台灣</p>
+                <p><i class="fab fa-linkedin"></i> linkedin.com/in/yourname | <i class="fas fa-globe"></i> 個人網站: yourwebsite.com</p>
             </div>
         </header>
 
         <section id="about" class="section">
             <h2 class="section-title">個人簡介</h2>
-            <p>在此處放置您的個人簡介，描述您的專業背景、核心優勢和職業目標。簡短有力地介紹自己，讓招聘者在短時間內了解您的價值和特點。</p>
+            <p>中央研究院資訊科技創新研究中心 | 研究助理</p>
+            <p>逢甲大學 | 資訊工程學系 碩士畢業</p>
+            <p>桃園市八德區 | 1年(含)以下工作經驗<p>
+            <p><strong>中央研究院資訊創新研究中心 | 研究助理 | 一年</strong></p>
+
+            <p> 負責設計與改良傳統腦電波電極，並在工作期間學習了腦電波相關知識與 3D 建模技術。</p> 
+                
+            <p><strong>逢甲大學資訊工程系碩士班</strong>  </p>  
+                
+            <p> 主要研究虛擬實境（VR）和眼動儀，專注於斜視相關研究。
+                
+                熟悉 VR 軟硬體技術，包括 Unity 和 C#，並修習影像處理、計算機視覺、類神經網絡及統計學等課程。熟練使用 Python，掌握 OpenCV 和 Pandas 等資料處理套件。</p>
         </section>
         
         <section id="biography" class="section">
             <h2 class="section-title">個人自傳</h2>
             <div class="biography-container">
                 <div class="biography-summary">
-                    <p>我是一位專注於[您的專業領域]的專業人士，擁有[X]年的相關經驗。我畢業於[您的學校]，主修[您的專業]。我對[特定領域或技術]有濃厚的興趣，並致力於[您的職業目標]。</p>
+                    <p>我碩士畢業於<strong>逢甲大學</strong>，主修資訊工程學系。在學期間主要研究虛擬實境，選修課程則多為影像處理方面課程，碩士論文是將斜視檢測技術應用到VR系統。畢業後到中研院擔任研究助理，主要研究腦電訊號。期間也接觸到了3D列印。在職期間，總計發出1篇論文、兩項專利。</p>
                 </div>
                 <button class="toggle-button" onclick="toggleBiography()">展開完整自傳</button>
                 <div id="fullBiography" class="biography-full">
-                    <p>我出生於[出生地]，從小就對[興趣/專業]充滿熱情。在學生時代，我積極參與[相關活動]，這為我日後的職業發展奠定了堅實的基礎。</p>
+                    <div class="biography-header">
+                        <strong>【關於我】</strong>
+                    </div>
+
+                    <p>生於1998年，大學時就讀逢甲大學應用數學系，碩士時則轉讀同校資訊工程學系。這樣的經歷讓我有更深厚的數學底子能更容易得應付程式語言上的邏輯、計算...等問題。</p>    
                     
-                    <p>大學期間，我專注於[專業]的學習，並參與了多個[相關項目]。特別是[具體項目名稱]讓我獲得了寶貴的實踐經驗。在[年份]年，我有幸加入[組織/機構名稱]實習，這段經歷大大提升了我的專業技能和團隊合作能力。</p>
+                    <div class="biography-header">
+                        <strong>【工作經驗】</strong>
+                    </div>
                     
-                    <p>畢業後，我加入了[公司名稱]，擔任[職位]。在這個角色中，我負責[主要職責]，並成功[成就或貢獻]。通過這些經歷，我不僅提升了專業技能，還培養了[軟技能，如領導力、問題解決能力等]。</p>
+                    <p>碩士畢業後到中央研究院擔任研究助理，實驗室的主要研究項目為腦機介面。我負責設計改良腦電波裝置使用的電極。並從頭學習腦電波技術和3D建模。這段期間，我取得了一篇會議論文以及兩項專利。另外，我們團隊也與陽交大合作一起做過VR專案。將腦電波、VR、LLM串聯在一起的復健系統。其中我負責撰寫Unity程式邏輯以及擔任溝通橋樑。</p>
                     
-                    <p>後來，我轉向[新領域或新公司]，希望能夠[職業目標]。在這段職業旅程中，我面臨了[挑戰]，但通過[解決方法]成功克服了困難。這些經歷讓我認識到[重要領悟]的重要性。</p>
-                    
-                    <p>在職業發展的同時，我也注重個人成長和持續學習。我定期參加[培訓/研討會]，並獲得了[證書/認證]。我相信只有不斷學習和提升，才能在快速變化的[行業名稱]中保持競爭力。</p>
-                    
-                    <p>展望未來，我希望能夠[職業目標和抱負]，並通過[方式/途徑]為[行業/社會]做出更大的貢獻。我期待能夠加入一個能夠讓我充分發揮專業技能和創造力的團隊，共同實現[共同目標]。</p>
-                    
-                    <p>在工作之餘，我熱衷於[興趣愛好]，這不僅豐富了我的生活，還為我的專業工作帶來了新的靈感和視角。我相信保持工作與生活的平衡對於長期職業發展至關重要。</p>
+                    <div class="biography-header">
+                        <strong>【求學經歷】</strong>
+                    </div>
+
+                    <p>碩士期間開始接觸到人工智慧，因此特別加強了統計學相關的能力，因此學了高級統計方法、最佳化方法及應用。而後跟隨教授學習影像處理的技能，其中包含如何處理影像畸變、相機模型、特徵提取、影像拼接、影像辨識。也曾擔任影像處理課程的助教，負責教導學生如何使用opencv。此外也修習了數門相關課程，包括影像處理、計算機視覺、醫療影像處理。</p>
+                    <div class="biography-header">
+                        <strong>【VR開發經驗】</strong>
+                    </div>
+
+                    <p>碩士期間主要研究項目為虛擬實境以及眼動儀，並與中國醫藥大學附設醫院眼科合作，進行斜視相關的研究，並以此作為畢業論文，題目為:利用虛擬實境討論不同技術測量斜視程度與輔助工具之開發。因此常常使用到unity並以C#進行編寫。曾經為了實現unity中的折射與反射，也研究過unity shader。在開發期間也接觸過不同的硬體設備，包含:HTC vive、HTC vive pro eye、samsung odyssey。</p>   
+                        
                 </div>
             </div>
         </section>
@@ -189,28 +81,17 @@
         <section class="section">
             <h2 class="section-title">工作經歷</h2>
             <div class="entry">
-                <div class="entry-title">職位名稱</div>
+                <div class="entry-title"><i class="fas fa-briefcase"></i> 職位名稱</div>
                 <div class="entry-info">
-                    <span>公司名稱</span>
-                    <span>起始年月 - 結束年月</span>
+                    <span><i class="fas fa-building"></i> 中央研究院</span>
+                    <span><i class="fas fa-calendar-alt"></i> 2023-11-1 ~ 2024-10-31</span>
                 </div>
                 <ul class="entry-description">
-                    <li>描述您在這個職位上的主要職責和成就</li>
-                    <li>使用具體數據和例子來展示您的貢獻</li>
-                    <li>強調對公司或團隊產生的積極影響</li>
-                </ul>
-            </div>
-            
-            <div class="entry">
-                <div class="entry-title">職位名稱</div>
-                <div class="entry-info">
-                    <span>公司名稱</span>
-                    <span>起始年月 - 結束年月</span>
-                </div>
-                <ul class="entry-description">
-                    <li>描述您在這個職位上的主要職責和成就</li>
-                    <li>使用具體數據和例子來展示您的貢獻</li>
-                    <li>強調對公司或團隊產生的積極影響</li>
+                    <p><strong>腦機介面實驗室 | 研究助理</strong></p>
+                    <li>協助設計腦機介面實驗，負責收集並分析資料，確保實驗數據的準確性和完整性。</li>
+                    <li>協助撰寫與腦電波分析相關的論文，研究成果發表於 EMBC2024。</li>
+                    <li>學習並運用 FDM 和 LCD 技術進行 3D 列印，能夠建造簡單的 3D 模型 來支持電極設計。</li>
+                    <li>使用 MATLAB 進行腦電波信號的分析和數據處理，精通相關的數據分析流程和工具。</li>
                 </ul>
             </div>
         </section>
@@ -218,15 +99,15 @@
         <section class="section">
             <h2 class="section-title">教育背景</h2>
             <div class="entry">
-                <div class="entry-title">學位名稱</div>
+                <div class="entry-title"><i class="fas fa-graduation-cap"></i> 逢甲大學</div>
                 <div class="entry-info">
-                    <span>學校名稱</span>
-                    <span>畢業年份</span>
+                    <span><i class="fas fa-university"></i> 資訊工程系碩士班</span>
+                    <span><i class="fas fa-calendar-alt"></i> 2020-9-1~2023-1-31</span>
                 </div>
                 <div class="entry-description">
-                    <p>主修科目: 您的主修</p>
-                    <p>GPA: 您的GPA (選填)</p>
-                    <p>相關課程: 列出與您申請職位相關的重要課程</p>
+                    <p><i class="fas fa-book"></i> 論文題目: 利用虛擬實境討論不同技術測量斜視程度與輔助工具之開發</p>
+          
+                    <p><i class="fas fa-list-ul"></i> 熟悉學科: 影像處理、計算機視覺、機率與統計、線性代數、類神經網路。</p>
                 </div>
             </div>
         </section>
@@ -234,24 +115,24 @@
         <section class="section">
             <h2 class="section-title">專業技能</h2>
             <div class="skills">
-                <div class="skill">技能1</div>
-                <div class="skill">技能2</div>
-                <div class="skill">技能3</div>
-                <div class="skill">技能4</div>
-                <div class="skill">技能5</div>
-                <div class="skill">技能6</div>
-                <div class="skill">技能7</div>
-                <div class="skill">技能8</div>
+                <div class="skill"><i class="fas fa-check-circle"></i> 技能1</div>
+                <div class="skill"><i class="fas fa-check-circle"></i> 技能2</div>
+                <div class="skill"><i class="fas fa-check-circle"></i> 技能3</div>
+                <div class="skill"><i class="fas fa-check-circle"></i> 技能4</div>
+                <div class="skill"><i class="fas fa-check-circle"></i> 技能5</div>
+                <div class="skill"><i class="fas fa-check-circle"></i> 技能6</div>
+                <div class="skill"><i class="fas fa-check-circle"></i> 技能7</div>
+                <div class="skill"><i class="fas fa-check-circle"></i> 技能8</div>
             </div>
         </section>
 
         <section id="projects" class="section">
             <h2 class="section-title">專案經驗</h2>
             <div class="entry">
-                <div class="entry-title">專案名稱</div>
+                <div class="entry-title"><i class="fas fa-code-branch"></i> 專案名稱</div>
                 <div class="entry-info">
-                    <span>使用技術</span>
-                    <span>完成時間</span>
+                    <span><i class="fas fa-laptop-code"></i> 使用技術</span>
+                    <span><i class="fas fa-calendar-check"></i> 完成時間</span>
                 </div>
                 <div class="entry-description">
                     <p>描述專案的目標、您的角色和貢獻，以及最終成果。強調您解決的問題和使用的技術。</p>
@@ -260,7 +141,8 @@
         </section>
 
         <footer>
-            更新日期: 2025年4月
+            <p><i class="fas fa-sync-alt"></i> 更新日期: 2025年4月</p>
+            <p><i class="far fa-copyright"></i> 版權所有 © 2025 您的姓名</p>
         </footer>
     </div>
 
@@ -272,9 +154,11 @@
             if (biographyElement.style.display === 'block') {
                 biographyElement.style.display = 'none';
                 buttonElement.textContent = '展開完整自傳';
+                buttonElement.innerHTML = '展開完整自傳';
             } else {
                 biographyElement.style.display = 'block';
                 buttonElement.textContent = '收起自傳';
+                buttonElement.innerHTML = '收起自傳';
             }
         }
     </script>

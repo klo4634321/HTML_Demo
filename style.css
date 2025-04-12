@@ -1,81 +1,164 @@
+/* 更新的基本樣式 */
 body {
-    font-family: Arial, "Microsoft JhengHei", sans-serif;
+    font-family: 'Nunito', Arial, "Microsoft JhengHei", sans-serif;
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    background-color: #f5f5f5;
+    background: linear-gradient(135deg, #f5f7fa 0%, #e8ecf1 100%);
     color: #333;
 }
 
+/* 現代色彩方案 - 漸層背景 */
 .nav {
-    background-color: #2c3e50;
+    background: linear-gradient(to right, #2c3e50, #4a6491);
     padding: 15px 0;
     text-align: center;
     position: sticky;
     top: 0;
     z-index: 100;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
 
 .nav-button {
     display: inline-block;
     padding: 8px 20px;
     margin: 0 10px;
-    background-color: #3498db;
+    background: linear-gradient(to right, #3498db, #2980b9);
     color: white;
     text-decoration: none;
-    border-radius: 4px;
+    border-radius: 25px;
     font-weight: bold;
-    transition: background-color 0.3s;
+    transition: all 0.3s ease;
+    border: none;
 }
 
 .nav-button:hover {
-    background-color: #2980b9;
-    cursor: pointer;
+    background: linear-gradient(to right, #2980b9, #1a5276);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
 
 .container {
     max-width: 900px;
-    margin: 0 auto;
-    padding: 20px;
+    margin: 30px auto;
+    padding: 30px;
     background-color: white;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    border-radius: 15px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* 添加一個微妙的背景裝飾 */
+.container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 150px;
+    height: 150px;
+    background: linear-gradient(135deg, rgba(52, 152, 219, 0.1) 0%, rgba(41, 128, 185, 0.05) 100%);
+    border-radius: 0 0 0 150px;
+    z-index: 0;
 }
 
 header {
     text-align: center;
-    padding: 20px 0;
+    padding: 30px 0;
     border-bottom: 2px solid #eee;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
+    position: relative;
 }
 
 h1 {
     margin: 0;
     color: #2c3e50;
+    font-size: 2.5rem;
+    letter-spacing: 1px;
 }
 
 .contact-info {
-    margin: 10px 0;
+    margin: 15px 0;
     font-size: 16px;
 }
 
+/* 為每個節區添加圖標 */
 .section {
-    margin-bottom: 30px;
+    margin-bottom: 40px;
+    position: relative;
+    padding-left: 15px;
+}
+
+.section::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #3498db;
+    font-size: 24px;
+    top: 0;
 }
 
 .section-title {
     color: #2c3e50;
-    border-bottom: 1px solid #eee;
-    padding-bottom: 5px;
-    margin-bottom: 15px;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+}
+
+/* 為不同的節區添加圖標 */
+.section-title::before {
+    font-family: "Font Awesome 5 Free";
+    margin-right: 10px;
+    color: #3498db;
+    font-weight: 900;
+}
+
+#about .section-title::before {
+    content: "\f007"; /* 人物圖標 */
+}
+
+#biography .section-title::before {
+    content: "\f15c"; /* 文檔圖標 */
+}
+
+section:nth-of-type(3) .section-title::before {
+    content: "\f0b1"; /* 公事包圖標（工作經歷） */
+}
+
+section:nth-of-type(4) .section-title::before {
+    content: "\f19d"; /* 畢業帽圖標（教育背景） */
+}
+
+section:nth-of-type(5) .section-title::before {
+    content: "\f085"; /* 齒輪圖標（專業技能） */
+}
+
+#projects .section-title::before {
+    content: "\f0ae"; /* 任務清單圖標（專案經驗） */
 }
 
 .entry {
-    margin-bottom: 20px;
+    margin-bottom: 25px;
+    padding: 15px;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.entry:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.1);
 }
 
 .entry-title {
     font-weight: bold;
-    margin-bottom: 5px;
+    margin-bottom: 8px;
+    color: #2c3e50;
+    font-size: 1.1rem;
 }
 
 .entry-info {
@@ -83,23 +166,45 @@ h1 {
     justify-content: space-between;
     color: #555;
     font-style: italic;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
+    padding-bottom: 8px;
+    border-bottom: 1px dashed #ddd;
 }
 
 .entry-description {
     text-align: justify;
 }
 
+/* 改進技能樣式 */
 .skills {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 12px;
 }
 
 .skill {
-    background-color: #eef2f7;
-    padding: 5px 10px;
-    border-radius: 3px;
+    background: linear-gradient(135deg, #eef2f7 0%, #d2dbe8 100%);
+    padding: 8px 15px;
+    border-radius: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.skill::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 4px;
+    background: #3498db;
+}
+
+.skill:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
 }
 
 footer {
@@ -107,6 +212,8 @@ footer {
     padding: 20px 0;
     color: #777;
     font-size: 14px;
+    border-top: 1px solid #eee;
+    margin-top: 20px;
 }
 
 .profile-image {
@@ -114,49 +221,85 @@ footer {
     height: 150px;
     border-radius: 50%;
     object-fit: cover;
-    margin: 0 auto 15px;
+    margin: 0 auto 20px;
     display: block;
-    border: 3px solid #eee;
+    border: 5px solid #fff;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease;
+}
+
+.profile-image:hover {
+    transform: scale(1.05);
 }
 
 /* 自傳的收放按鈕與內容樣式 */
 .biography-container {
-    margin-bottom: 20px;
+    margin-bottom: 25px;
 }
 
 .biography-summary {
-    margin-bottom: 10px;
+    margin-bottom: 15px;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    border-left: 4px solid #3498db;
 }
 
 .biography-full {
     display: none;
     background-color: #f9f9f9;
-    padding: 15px;
-    border-radius: 5px;
+    padding: 20px;
+    border-radius: 8px;
     border-left: 4px solid #3498db;
-    margin-top: 10px;
+    margin-top: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.biography-header {
+    margin: 0;
+    background-color: rgb(0, 196, 245);
+    color: #555;
+    line-height: 1.5;
+    font-size: 24px;
+    justify-content: center;
+    text-align: center; 
+    border-radius: 10px;
 }
 
 .toggle-button {
-    background-color: #3498db;
+    background: linear-gradient(to right, #3498db, #2980b9);
     color: white;
     border: none;
-    padding: 8px 15px;
-    border-radius: 4px;
+    padding: 10px 20px;
+    border-radius: 25px;
     cursor: pointer;
     font-size: 14px;
-    margin-top: 10px;
-    transition: background-color 0.3s;
+    margin-top: 15px;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 3px 8px rgba(52, 152, 219, 0.3);
+}
+
+.toggle-button::after {
+    content: "▼";
+    margin-left: 8px;
+    font-size: 12px;
+    transition: transform 0.3s ease;
 }
 
 .toggle-button:hover {
-    background-color: #2980b9;
+    background: linear-gradient(to right, #2980b9, #1a5276);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 12px rgba(52, 152, 219, 0.4);
 }
 
-/* 響應式設計 */
+/* 響應式設計調整 */
 @media screen and (max-width: 768px) {
     .container {
-        padding: 15px;
+        padding: 20px;
+        margin: 15px;
     }
     
     .nav-button {
@@ -187,7 +330,7 @@ footer {
     }
     
     h1 {
-        font-size: 24px;
+        font-size: 1.8rem;
     }
     
     .contact-info {

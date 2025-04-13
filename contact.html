@@ -33,26 +33,7 @@
           </form>
         </section>
     </div>
-    <div id="comment">
-        <section class="section">
-            <h2 class="section-title"><i class="fas fa-comments"></i> 公開留言區</h2>
-            <form method="POST">
-                <input type="text" name="name" required placeholder="您的姓名">
-                <textarea name="content" required placeholder="留言內容"></textarea>
-                <button type="submit" class="toggle-button">發表留言</button>
-            </form>
-
-            {% for name, content, created_at in comments %}
-            <div class="entry" style="margin-top:15px;">
-                <p><strong>{{ name }}</strong>：</p>
-                <p>{{ content }}</p>
-                <p style="font-size: 12px; color: gray;">{{ created_at }}</p>
-            </div>
-            {% endfor %}
-
-        </section>
-
-    </div> 
+      
 
     <script>
         document.getElementById("contactForm").addEventListener("submit", async function(e) {

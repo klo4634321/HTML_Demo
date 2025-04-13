@@ -3,8 +3,6 @@ import pymysql
 
 app = Flask(__name__)
 
-
-
 # MySQL 設定
 db = pymysql.connect(
     host="127.0.0.1",
@@ -20,6 +18,15 @@ cursor = db.cursor()
 cursor.execute("SELECT * FROM comments ORDER BY id DESC LIMIT 1")
 latest_comment = cursor.fetchone()
 print("伺服器啟動時的最新留言：", latest_comment)
+
+@app.route("/")
+@app.route("/index")
+def index():
+    return render_template("index.html")
+
+@app.route("/projects")
+def projects():
+    return render_template("projects.html")
 
 @app.route("/contact", methods=["GET", "POST"])
 def contact():

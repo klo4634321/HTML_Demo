@@ -6,11 +6,11 @@
     <title>聯絡我</title>
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
     <div class="nav">
-        <a href="index.html" class="nav-button"><i class="fas fa-home"></i> 回首頁</a>
+        <a href="{{ url_for('index') }}" class="nav-button"><i class="fas fa-home"></i> 回首頁</a>
     </div>
 
     <div class="container">

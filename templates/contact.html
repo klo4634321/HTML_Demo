@@ -6,7 +6,8 @@
     <title>聯絡我</title>
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../static/style.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
     <div class="nav">
@@ -15,9 +16,9 @@
 
     <div class="container">
         <section class="section">
-          <h2 class="section-title"><i class="fas fa-envelope"></i> 聯絡我</h2>
+            <h2 class="section-title"><i class="fas fa-envelope"></i> 聯絡我</h2>
       
-          <form action="https://formsubmit.co/klo4634321@gmail.com" method="POST">
+            <form action="https://formsubmit.co/klo4634321@gmail.com" method="POST">
             <div class="entry">
               <label for="name"><strong>姓名：</strong></label><br>
               <input type="text" id="name" name="name" required style="width:100%; padding:10px; margin-bottom:15px; border-radius:8px; border:1px solid #ccc;">
@@ -30,7 +31,20 @@
       
               <button type="submit" class="toggle-button">送出</button>
             </div>
-          </form>
+            </form>
+
+            <hr>
+            <h3 style="margin-top: 40px;">留言板</h3>
+            <div>
+                {% for name, context in messages %}
+                    <div style="border:1px solid #ccc; padding:10px; margin:10px 0; border-radius:10px;">
+                        <strong>{{ name }} 說：</strong><br>
+                        {{ context }}
+                    </div>
+                {% endfor %}
+            </div>
+
+
         </section>
     </div>
       

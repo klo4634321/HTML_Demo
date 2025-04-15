@@ -32,16 +32,39 @@
               <button type="submit" class="toggle-button">送出</button>
             </div>
             </form>
+            
+            <p>下方留言內容呈現是利用SQLite作為資料儲存。<br>該功能僅為展示用，因此不限定任何人刪除留言</p>
+
+            <h3 style="margin-top: 40px;">新增留言</h3>
+            <form method="POST" action="/comment" style="margin-bottom:30px;">
+                <div class="entry">
+                    <label for="comment_name"><strong>姓名：</strong></label><br>
+                    <input type="text" id="comment_name" name="name" required style="width:100%; padding:10px; margin-bottom:15px; border-radius:8px; border:1px solid #ccc;">
+            
+                    <label for="comment_message"><strong>留言內容：</strong></label><br>
+                    <textarea id="comment_message" name="context" rows="4" required style="width:100%; padding:10px; margin-bottom:15px; border-radius:8px; border:1px solid #ccc;"></textarea>
+            
+                    <button type="submit" class="toggle-button">留言</button>
+                </div>
+            </form>            
 
             <hr>
             <h3 style="margin-top: 40px;">留言板</h3>
             <div>
-                {% for name, context in messages %}
-                    <div style="border:1px solid #ccc; padding:10px; margin:10px 0; border-radius:10px;">
-                        <strong>{{ name }} 說：</strong><br>
-                        {{ context }}
-                    </div>
+                {% for msg in messages %}
+                <div>
+                    <strong>{{ msg.name }} 說：</strong><br>
+                    {{ msg.context }}
+
+                    <form method="POST" action="/delete_comment">
+                        <input type="hidden" name="id" value="{{ msg.id }}">
+                        <button type="submit">🗑 刪除</button>
+                    </form>
+                </div>
+                {% else %}
+                <p>目前沒有留言。</p>
                 {% endfor %}
+
             </div>
 
 

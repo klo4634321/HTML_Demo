@@ -11,3 +11,4 @@
 code請參考Netfily branch。
 -2025-4-14
 
+p.s. 由於database也在github上，所以如果重新部屬。先前留言會被洗掉，回到github上的原始狀態。

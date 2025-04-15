@@ -19,9 +19,9 @@ def index():
 def index_html():
     return render_template('index.html')
 
-@app.route('/project')
+@app.route('/projects')
 def project():
-    return render_template('project.html')
+    return render_template('projects.html')
 
 
 @app.route('/contact', methods=['GET', 'POST'])

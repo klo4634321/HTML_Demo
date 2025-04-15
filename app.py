@@ -15,9 +15,14 @@ def home():
 def index():
     return render_template('index.html')
 
+@app.route('/index.html')
+def index_html():
+    return render_template('index.html')
+
 @app.route('/project')
 def project():
     return render_template('project.html')
+
 
 @app.route('/contact', methods=['GET', 'POST'])
 def contact():

@@ -5,11 +5,19 @@ import os
 app = Flask(__name__)
 
 
+from flask import redirect, url_for
+
+@app.route('/')
+def home():
+    return redirect(url_for('index'))
 
 @app.route('/index')
 def index():
     return render_template('index.html')
 
+@app.route('/project')
+def project():
+    return render_template('project.html')
 
 @app.route('/contact', methods=['GET', 'POST'])
 def contact():

@@ -1,0 +1,2 @@
+https://app.netlify.com/sites/warm-cranachan-310f09/deploys/67f95ca3c8a3071b8a06557d
+https://dashboard.render.com/web/srv-cvuqfqvgi27c739d139g/deploys/dep-cvurt8pr0fns739t1a50

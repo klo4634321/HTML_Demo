@@ -13,11 +13,11 @@ def home():
 
 @app.route('/index')
 def index():
-    return render_template('index.html')
+    return render_template('index')
 
 @app.route('/project')
 def project():
-    return render_template('project.html')
+    return render_template('project')
 
 @app.route('/contact', methods=['GET', 'POST'])
 def contact():

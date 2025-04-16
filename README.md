@@ -28,11 +28,14 @@
 
 ### 🔸 Render 版本（後端完整）
 > 📅 部屬日期：2025-04-15  
-> 🔗 [https://dashboard.render.com/web/srv-cvuqfqvgi27c739d139g/deploys/dep-cvus4pp5pdvs73bpgce0](https://dashboard.render.com/web/srv-cvuqfqvgi27c739d139g/deploys/dep-cvus4pp5pdvs73bpgce0)
+> 🔗 [新版履歷](https://html-demo-hhqc.onrender.com/index)
+> 增加了留言板
+> 預計為主要維護版本
 
 ### 🔹 Netlify 版本（前端展示）
 > 📅 部屬日期：2025-04-14  
-> 🔗 [https://warm-cranachan-310f09.netlify.app/](https://warm-cranachan-310f09.netlify.app/)  
+> 🔗 [舊版履歷](https://warm-cranachan-310f09.netlify.app/)
+> 停止維護
 > 🔁 **請參考 `netlify` 分支中的原始碼**
 
 > ⚠️ **注意：** 本專案的 SQLite 資料庫（`Devdb.db`）也一併上傳至 GitHub。若重新部屬，留言資料將會被重置為原始狀態！
